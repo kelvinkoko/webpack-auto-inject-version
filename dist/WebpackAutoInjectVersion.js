@@ -3157,7 +3157,7 @@ var AutoIncreaseVersion = function () {
       }
 
       // write new package.json file
-      _fs2.default.writeFile(_path2.default.resolve(this.context.config.PACKAGE_JSON_PATH), (0, _stringify2.default)(this.packageFile, null, this.context.config.PACKAGE_JSON_INDENT), function (err) {
+      _fs2.default.writeFile(_path2.default.resolve(this.context.config.PACKAGE_JSON_PATH), (0, _stringify2.default)(this.packageFile, null, this.context.config.PACKAGE_JSON_INDENT) + '\n', function (err) {
         if (err) {
           _this2.reject(err);
           console.log(err);
